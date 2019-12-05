@@ -1,0 +1,283 @@
+.myfooter {
+  position: fixed;
+  background-color: #555;
+  color: white;
+  padding: auto 15px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: right;
+}
+.myfooter p{
+  padding-right: 60px;
+}
+
+.contain_box {
+  margin: 20px 40px;
+}
+
+.contain_box label {
+  font-size: 1.5rem;
+}
+
+.camerabooth {
+  border: 10px solid #ddd;
+  margin: 0 auto;
+}
+
+.content_box {
+	margin: 40px auto;
+}
+
+.media-content {
+  border: 1px solid lightsalmon;
+  border-radius: 10px;
+  display: flex;
+	flex-direction: column;
+  margin: 20px auto;
+  background: linear-gradient(to bottom right, pink, violet);
+  width: 55%;
+  min-width: 300px;
+  align-items: center;
+}
+.gallery-content {
+  border: 1px solid lightsalmon;
+  border-radius: 10px;
+  display: flex;
+	flex-direction: column;
+  margin: 20px auto;
+  background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  width: 55%;
+  min-width: 300px;
+  align-items: center;
+}
+.content {
+  margin: 20px auto;
+  width: 50%;
+  min-width: 250px;
+}
+
+.img_box {
+  border: 5px solid plum;
+  border-radius: 10px;
+  margin: 10px auto;
+  background: white;
+  width: auto;
+  text-align: center;
+}
+.img_box img {
+  text-align: center;
+}
+
+.commentor_input_box input{
+  height: 50px;
+  width: 100%;
+}
+
+.comment_button input{
+  font-size: 20px;
+}
+
+.comment_box {
+  margin: 10px auto;
+  padding: 20px;
+}
+.comment_box p{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(237, 215, 250);
+}
+
+.profile {
+  padding: 30px;
+  font-size: 1.5rem;
+}
+
+.gallery-box {
+  background: linear-gradient(to bottom right, , violet);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  margin: 20px;
+}
+
+.paging {
+  text-align: center;
+  margin : 40px auto;
+}
+.paging button {
+  font-size:  20px;
+  padding: 20px;
+}
+
+.editor-box{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.box-header {
+  background-color: #ddd;
+  font-size: 1.2em;
+  text-align: center;
+}
+.gallery-scroll {
+  overflow: auto;
+}
+.left-box {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  border: 10px solid paleturquoise;
+  width: 25%;
+  height: 80vh;
+}
+.middle-box {
+  margin: 0 30px 0 30px;
+  /* background-color: #ccc;
+  border: 10px solid #ddd; */
+}
+.options input{
+  width: 100px;
+}
+
+.right-box {
+  background-color: aliceblue;
+  border: 10px solid paleturquoise;
+  width: 20%;
+}
+
+.stickers img:hover{
+  background-color: aqua;
+  padding: 10px;
+}
+
+.preview {
+  position: relative;
+}
+
+.preview canvas {
+  border: 10px solid #ddd;
+  margin: 0 auto;
+}
+
+.preview img {
+  position: absolute;
+}
+
+.sticker {
+  width: 100px;
+  top: 10px;
+  left: 10px;
+}
+
+.display{
+  margin: 5px;
+}
+.display img{
+  width: 800px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .editor-box {
+    display: block;
+  }
+
+  .gallery-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: center;
+  }
+
+  .display {
+    flex: 0 0 auto;
+    margin: 5px;
+    width: 20vw;
+  }
+
+  .left-box {
+    margin-bottom: 20px;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+  }
+
+  .right-box {
+    margin-top: 20px;
+    background-color: aliceblue;
+    border: 10px solid paleturquoise;
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+
+  .stickers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100px;
+    width: auto;
+    height: auto;
+  }
+}

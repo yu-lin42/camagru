@@ -1,0 +1,120 @@
+main{
+	width: 100vw;
+	height: calc(100vh - 80px);
+	margin: 0 0 0 0;
+	overflow-y: scroll;
+	padding-bottom: 50px;
+	background-image: linear-gradient(to bottom right, #ddd, grey);
+}
+
+body {
+	overflow: hidden;
+	background-image: linear-gradient(to bottom right, #ddd, grey);
+}
+
+html {
+	overflow: hidden;
+}
+
+.navbar {
+	position: static;
+	width: 100vw;
+	top: 0;
+}
+
+.main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.container{
+	border-radius: 15px;
+	background: white;
+	margin: 50px auto;
+	height: 700px;
+	width: 450px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.error_box {
+	display: none;
+	width: 450px;
+	display: none;
+	background: grey;
+	padding: 10px;
+}
+
+.loginbox {
+	border-radius: 20px;
+	width: 300px;
+	padding: 25px;
+	background-color: rgb(235, 135, 202);
+	box-shadow: 10px 10px 10px plum; 
+}
+
+.form div{
+	display: flex;
+	flex-direction: column;
+}
+
+
+.form button{
+	font-size: 12px;
+	padding: 5px;
+	margin-top: 15px;
+	border-radius: 8px;	
+}
+.form input{
+	font-size: 15px;
+	padding: 10px;
+	margin: auto 10px;
+}
+
+.form input::after{
+	display: inline;
+	content: url("./img/user_icon.png");
+}
+
+.registerbox{
+	border-radius: 20px;
+	width: 300px;
+	padding: 20px;
+	background-color: rebeccapurple;
+	box-shadow: 8px 8px 10px violet; 
+}
+.register{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.register a{
+	text-decoration: none;
+}
+
+.forgotbox{
+	border-radius: 20px;
+	width: 300px;
+	padding: 25px;
+	background-color: rgb(235, 135, 202);
+	box-shadow: 8px 8px 10px plum; 
+}
+
+.forgotbox_email{
+	font-size: 12px;
+	margin:10px auto;
+}
+
+.forgotbox_btn{
+	margin-top: 15px;
+	border-radius: 8px;	
+}
+
+.resetbox {
+	border-radius: 20px;
+	width: 300px;
+	padding: 25px;
+	background-color: rgb(235, 135, 202);
+	box-shadow: 8px 8px 10px plum; 
+}
