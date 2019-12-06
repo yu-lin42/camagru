@@ -7,11 +7,11 @@
         save = document.getElementById('save'),
         reset = document.getElementById('reset'),
         stickerToggles = document.getElementsByClassName('sticker-toggle'),
-        previewElement = document.getElementById('preview'),
-        vendorURL = window.URL || window.webkitURL;
+        previewElement = document.getElementById('preview');
 
     addSticker.disabled = true;
     save.disabled = true;
+    reset.disabled = true;
     navigator.getMedia = navigator.getUserMedia ||
         navigator.webkitGetUserMedia ||
         navigator.mozGetUserMedia ||
@@ -32,7 +32,6 @@
         canvas.style.display = "flex";
         pseudoCanvas.style.display = "initial";
 
-        // cancer
         pseudoCanvas.width = video.offsetWidth;
         pseudoCanvas.height = video.offsetHeight;
         canvas.width = video.offsetWidth;
@@ -41,6 +40,7 @@
         canvas.style.position = 'absolute';
         addSticker.disabled = false;
         save.disabled = false;
+        reset.disabled = false;
         //manipulate canvas here
     });
 
@@ -50,10 +50,13 @@
     });
 
     reset.addEventListener('click', () => {
+        let stickersElement = document.getElementById('stickers'); 
+        stickersElement.style.display = 'none';
         canvas.style.display = "none";
         pseudoCanvas.style.display = "none";
         addSticker.disabled = true;
         save.disabled = true;
+        reset.disabled = true;
         var stickersDisplayed = document.getElementsByClassName('sticker-preview');
         while(stickersDisplayed.length > 0){
             stickersDisplayed[0].parentNode.removeChild(stickersDisplayed[0]);
@@ -80,7 +83,6 @@
 
         request.open("POST", "/" + server_location + "/model/save_image.php");
 
-        // cuan
         request.onreadystatechange = function (res) {
             if (request.readyState === request.DONE && request.status === 200) {
                 console.log(res);
@@ -94,7 +96,6 @@
         );
     });
 
-    // cuan
     for (let stickerToggle of stickerToggles) {
         stickerToggle.onclick = () => { onToggleSticker(stickerToggle); }
     }

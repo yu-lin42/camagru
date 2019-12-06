@@ -16,8 +16,7 @@ function submit()
 				div.style.display = "block";
 				var errors = request.responseText.split(":");
 				errors.forEach((err) => {
-					if (err)
-					{
+					if (err) {
 						div.innerHTML += err + "<br/>";
 					}
 				});
@@ -29,8 +28,6 @@ function submit()
 				var success = document.getElementById("form");
 				success.innerHTML = "An email has been sent for verification.";
 				div.style.display = "none";
-				//hide form
-				//show success
 			}
 			console.log(request.responseText);
 		}

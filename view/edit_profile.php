@@ -15,19 +15,17 @@
 </head>
 <body>
     <main>
-        <div>
-            <div class="contain_box">
-                <img src="/<?=$server_location?>/view/img/user_icon.png" width="20px"><label>  Current Username is: <?=$user['username']?></label>
-                <div>
-                    <input type="text" id="new_name" placeholder="New Username">
-                    <button type="submit" onclick="update_username()">Change Username</button>
-                </div>
-                <br/>
-                <img src="/<?=$server_location?>/view/img/email_icon.png" width="20px"><label>  Current Email is: <?=$user['email']?></label>
-                <div>
-                    <input type="text" id="new_mail" placeholder="New Email">
-                    <button type="submit" onclick="update_email()">Change Email</button>
-                </div>
+        <div class="contain_box">
+            <img src="/<?=$server_location?>/view/img/user_icon.png" width="20px"><label>  Current Username is: <?=$user['username']?></label>
+            <div>
+                <input type="text" id="new_name" placeholder="New Username">
+                <button type="submit" onclick="update_username()">Change Username</button>
+            </div>
+            <br/>
+            <img src="/<?=$server_location?>/view/img/email_icon.png" width="20px"><label>  Current Email is: <?=$user['email']?></label>
+            <div>
+                <input type="text" id="new_mail" placeholder="New Email">
+                <button type="submit" onclick="update_email()">Change Email</button>
             </div>
         </div>
         <div id="message"></div>

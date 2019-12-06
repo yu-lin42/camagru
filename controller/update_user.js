@@ -34,7 +34,7 @@ function update_username() {
     request.addEventListener("load", () => {
         var msg = document.getElementById("message");
         if (request.status == 400) {
-            console.log(request.responseText);
+            // console.log(request.responseText);
             var msgs = request.responseText.split(":");
 
             msg.innerHTML = "";
@@ -42,7 +42,7 @@ function update_username() {
                 msg.innerHTML += msgs[i] + "<br/>";
         }
         if (request.status == 200) {
-            console.log(new_name.value);
+            console.log("Username changed to " + new_name.value);
             location.reload();
         }
     });
@@ -60,14 +60,14 @@ function update_email() {
     request.addEventListener("load", () => {
         var msg = document.getElementById("message");
         if (request.status == 400) {
-            console.log(request.responseText);
+            // console.log(request.responseText);
             var msgs = request.responseText.split(":");
             msg.innerHTML = "";
             for (var i = 0; i <msgs.length; i++)
                 msg.innerHTML += msgs[i] + "<br/>";
         }
         if (request.status == 200) {
-            console.log(new_mail.value);
+            console.log("Email changed to " + new_mail.value);
             location.reload();
         }
     });

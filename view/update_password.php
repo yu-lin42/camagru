@@ -3,6 +3,7 @@
     session_start();
     require('view/clean.php');
     require('view/header.php');
+    if (isset($_SESSION['sess_uid'])) {
 ?>
 
 <head>
@@ -14,7 +15,7 @@
         <div class="contain_box">
             <input type="password" id="old_pwd" placeholder="Old Password"><br/>
             <input type="password" id="new_pwd" placeholder="New Password"><br/>
-            <input type="password" id="confirm" placeholder="Reconfirm">
+            <input type="password" id="confirm" placeholder="Reconfirm Password">
             <div>
                 <button type="submit" onclick="update_password()">Update Password</button>
             </div>
@@ -23,5 +24,9 @@
     </main>
 </body>
 <?php
+    }
+    else {
+        header("location: /$server_location/view/error.php?message=Access+denied");
+    }
     require "footer.php";
 ?>

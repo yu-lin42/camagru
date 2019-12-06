@@ -8,11 +8,12 @@
 </head>
 <main>
 	<div class="box">
+			<div id="errors" class="error_box"></div>
 		<div class="container">
 			<div>
-				<img src="/<?=$server_location?>/view/img/camagru_logo_lite.png" alt="logo" width="250px">
+				<img src="/<?=$server_location?>/view/img/camagru_login_dark.png" alt="logo" width="250px">
 			</div>
-			<div id="form" class="form">
+			<div id="form" class="form" style="color: white">
 				<div id="registerbox" class="registerbox" action="/<?=$server_location?>/model/newuser.php" method="post">
 					<input id="username" type="text" name="usr" placeholder="Username">
 					<input id="email" type="text" name="mail" placeholder="E-mail">
@@ -26,7 +27,6 @@
 				</div>			
 			</div>
 		</div>
-		<div id="errors" class="error_box"></div>
 	</div>
 </main>
 <?php

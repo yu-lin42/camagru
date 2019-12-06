@@ -9,11 +9,11 @@
 	<main>
 		<div class="container">
 			<div>
-				<img src="img/camagru_logo_lite.png" alt="logo" width=250px>
+				<img src="img/camagru_login_dark.png" alt="logo" width=250px>
 			</div>
 			<div class="form">
 				<div class="loginbox" action="/<?=$server_location?>/model/login_check.php" method="post">
-						<input type="text" id="username" placeholder="Username">
+					<input type="text" id="username" placeholder="Username">
 					<input type="password" id="passwd" placeholder="Password">
 					<a href="/<?=$server_location?>/view/forgotten.php">Forgot Password</a>
 					<button type="submit" id="login">Log In</button>

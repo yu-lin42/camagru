@@ -17,7 +17,6 @@
         $results = $stmnt->fetch(PDO::FETCH_ASSOC);
         echo ("<strong>@". htmlspecialchars($results["username"]) . " says: </strong> " . htmlspecialchars($comment));
 
-        
         $stmt = $conn->prepare("SELECT `users`.`email`, `users`.`username` FROM `gallery` LEFT JOIN `users` ON `gallery`.`uploader_id`=`users`.`uid` WHERE `users`.`notified`=1 AND `gallery`.`img_id`=?");
         $stmt->execute(array($post_id));
         if ($row = $stmt->fetch(PDO::FETCH_ASSOC))

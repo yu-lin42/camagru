@@ -12,6 +12,7 @@ window.onload = function()
     
     addSticker.disabled = true;
     save.disabled = true;
+    reset.disabled = true;
     
     image_file.addEventListener("change", () => {
         var piece = null;
@@ -36,6 +37,7 @@ window.onload = function()
                 canvas.style.position = 'absolute';
                 addSticker.disabled = false;
                 save.disabled=false;
+                reset.disabled = false;
             }
             pic.src = URL.createObjectURL(piece);
             console.log(pic.src);
@@ -74,11 +76,13 @@ window.onload = function()
     }
 
     reset.addEventListener('click', () => {
-
+        let stickersElement = document.getElementById('stickers'); 
+        stickersElement.style.display = 'none';
         canvas.style.display = "none";
         pseudoCanvas.style.display = "none";
         addSticker.disabled = true;
         save.disabled = true;
+        reset.disabled = true;
         var stickersDisplayed = document.getElementsByClassName('sticker-preview');
         while(stickersDisplayed.length > 0){
             stickersDisplayed[0].parentNode.removeChild(stickersDisplayed[0]);

@@ -25,7 +25,6 @@ if ($stmt->rowCount() == 1) {
 else {
 ?>
 	<link rel="stylesheet" href="/<?=$server_location?>/view/style.css">
-	
 	<h2>Sorry, this verification is invalid. Please try again. :(</h2>
 <?php
 }

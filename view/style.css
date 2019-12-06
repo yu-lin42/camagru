@@ -8,7 +8,7 @@ main{
 }
 
 body {
-	overflow: hidden;
+	overflow: auto;
 	background-image: linear-gradient(to bottom right, #ddd, grey);
 }
 
@@ -29,16 +29,21 @@ html {
 }
 .container{
 	border-radius: 15px;
-	background: white;
+	background: black;
 	margin: 50px auto;
-	height: 700px;
-	width: 450px;
+	height: 85%;
+	min-height: 700px;
+	width: 27%;
+	min-width: 300px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.error_box {
+.error_box { 
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	display: none;
 	width: 450px;
 	display: none;
@@ -48,7 +53,8 @@ html {
 
 .loginbox {
 	border-radius: 20px;
-	width: 300px;
+	width: 80%;
+	max-width: 200px;
 	padding: 25px;
 	background-color: rgb(235, 135, 202);
 	box-shadow: 10px 10px 10px plum; 
@@ -72,14 +78,10 @@ html {
 	margin: auto 10px;
 }
 
-.form input::after{
-	display: inline;
-	content: url("./img/user_icon.png");
-}
-
 .registerbox{
 	border-radius: 20px;
-	width: 300px;
+	width: 80%;
+	max-width: 200px;
 	padding: 20px;
 	background-color: rebeccapurple;
 	box-shadow: 8px 8px 10px violet; 
@@ -89,13 +91,18 @@ html {
 	flex-direction: column;
 	align-items: center;
 }
+.register h1, h3 {
+	color: lightgray;
+}
 .register a{
+	color: lightskyblue;
 	text-decoration: none;
 }
 
 .forgotbox{
 	border-radius: 20px;
-	width: 300px;
+	width: 80%;
+	max-width: 200px;
 	padding: 25px;
 	background-color: rgb(235, 135, 202);
 	box-shadow: 8px 8px 10px plum; 
@@ -117,4 +124,23 @@ html {
 	padding: 25px;
 	background-color: rgb(235, 135, 202);
 	box-shadow: 8px 8px 10px plum; 
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		border-radius: 15px;
+		background: black;
+		height: auto;
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.registerbox{
+		border-radius: 20px;
+		width: 80%;
+		padding: 20px;
+		background-color: rebeccapurple;
+		box-shadow: 8px 8px 10px violet; 
+	}
 }

@@ -6,7 +6,7 @@ window.onload = function (){
             var notifi = 1;
         else
             notifi = 0;
-        console.log(notifi);
+        // console.log(notifi);
         var request = new XMLHttpRequest();
         request.open("POST", "/" + server_location + "/model/notification.php");
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

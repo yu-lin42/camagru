@@ -15,7 +15,7 @@ if (empty($username) || empty($email) || empty($passwd) || empty($passwdRepeat))
 }
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	$fail = true;
-	echo "Email Invalid:";
+	echo "Email is invalid:";
 }
 if (!preg_match("/^[a-zA-Z0-9]{5,}$/", $username)) {
 	$fail = true;
@@ -36,7 +36,7 @@ if (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})
 			$sql = $conn->prepare("INSERT INTO users(username, email, hashpwd, token, verified, notified)
 			VALUES (?, ?, ?, ?, ?, ?)");
 			$sql->execute(array($username, $email, $pwdhash, $token, 0, 0));
-			///////////////////////////////////////////////////////////////////////////////////
+
 			$to      = $email; // Send email to our user
 			$subject = 'Signup | Verification'; // Give the email a subject 
 			$message = '

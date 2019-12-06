@@ -6,13 +6,11 @@ session_start();
 $user_id = $_SESSION["sess_uid"];
 $img_data = $_POST['image'];
 
-// cuan
 $stickers = explode(',', $_POST['stickers']);
 $image_data = $img_data;
 $image = imagecreatefromstring(base64_decode($image_data));
 foreach ($stickers as $sticker) {
     $stickerData = imagecreatefrompng($sticker);
-    // imagecopy($image, $stickerData, 0, 0, 0, 0, 100, 100);
     imagealphablending($image, true);
 	imagesavealpha($image, true);
 	imagesavealpha($stickerData, true);

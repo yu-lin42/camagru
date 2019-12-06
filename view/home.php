@@ -22,17 +22,17 @@ session_start();
             $page = 1;
           $page_len = 5;
           $offset = (($page - 1) * $page_len);
-
+          //Total posts in the table
           $stmnt = $conn->prepare("SELECT COUNT(*) FROM `gallery`");
           $stmnt->execute();
           $total_posts = $stmnt->fetch()[0];
           $has_more_posts = (($offset + $page_len) < $total_posts);
-
+          // Getting 5 images at a time
           $stmnt = $conn->prepare("SELECT `gallery`.* FROM `gallery` ORDER BY `gallery`.`date_uploaded` DESC LIMIT $page_len OFFSET :offset");
           $stmnt->bindParam(":offset", $offset, PDO::PARAM_INT);
           $stmnt->execute();
 
-          // getting the time uploaded
+          // Getting the time uploaded
           $stmt = $conn->prepare("SELECT `gallery`.*, `users`.`username` FROM `gallery` LEFT JOIN `users` ON `users`.`uid`=`gallery`.`uploader_id` ORDER BY `gallery`.`date_uploaded` DESC LIMIT $page_len OFFSET " . (($page - 1) * $page_len));
           $stmt->execute();
           while($row = $stmt->fetch(PDO::FETCH_ASSOC))

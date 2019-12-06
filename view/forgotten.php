@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div>
-            <a href="/<?=$server_location?>/index.php"><img src="/<?=$server_location?>/view/img/camagru_logo_lite.png" alt="logo" width=250px></a>
+            <a href="/<?=$server_location?>/index.php"><img src="/<?=$server_location?>/view/img/camagru_login_dark.png" alt="logo" width=250px></a>
         </div>
         <div align="center">
             <h3>Verify your identity using your Email Address.</h3>
@@ -24,7 +24,6 @@
                 </div>
             </form>
         </div>
-        <div align=center id="error_msg"></div>
     </div>
     <script>
         var email = document.getElementById("email");
@@ -33,13 +32,13 @@
 
         reset.addEventListener("click", () => {
             var request = new XMLHttpRequest();
-            var msg = document.getElementById("error_msg");
             request.addEventListener("load", () => {
                 if (request.status == 400){
-                    msg.innerHTML = "The email address entered is not registered, please sign up.";
+                    alert("The email address entered is not registered, please sign up.");
                 }
                 if (request.status == 200) {
-                    msg.innerHTML = "The link to rest your password has been sent to your email.";
+                    alert("The link to rest your password has been sent to your email.");
+                    location.reload();
                 }
             });
             request.open("POST", "/<?=$server_location?>/model/forgot_password.php");

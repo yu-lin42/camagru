@@ -1,5 +1,5 @@
 <?php
-  //session_start();
+  require('view/clean.php');
 ?>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 <body>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <img src="/<?=$server_location?>/view/img/Logo_profile_lite.png" height="28">
+    <img src="/<?=$server_location?>/view/img/camagru_logo_dark.png">
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
