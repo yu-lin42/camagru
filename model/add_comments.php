@@ -3,7 +3,7 @@
     session_start();
     
     $commentor_id = $_SESSION['sess_uid'];
-    $comment = $_POST['comment_input'];
+    $comment = htmlspecialchars($_POST['comment_input']);
     $post_id = $_POST['post_id'];
 
     try {

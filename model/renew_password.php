@@ -8,9 +8,9 @@
 	try {
 		$pwdhash = password_hash($newpwd, PASSWORD_BCRYPT);
 		$stmnt = $conn->prepare('UPDATE `users` SET `hashpwd`=:pwdhash WHERE `email`=:email AND `token`=:token');
+		$stmnt->bindParam(':pwdhash', $pwdhash);
 		$stmnt->bindParam(':email', $email);
 		$stmnt->bindParam(':token',$token);
-		$stmnt->bindParam(':pwdhash', $pwdhash);
 		if ($stmnt->execute()) {
 			http_response_code(200);
 		}

@@ -19,7 +19,7 @@
 	<div class="box">
 		<div class="container">
 			<div>
-				<img src="/<?=$server_location?>/view/img/camagru_logo_lite.png" alt="logo" width="250px">
+				<img src="/<?=$server_location?>/view/img/camagru_login_dark.png" alt="logo" width="250px">
 			</div>
             <div align=center>
                 <h3>Please enter your email and new password</h3>
@@ -29,10 +29,10 @@
 					<input type="hidden" id="email" value="<?=$_GET['email']?>">
 					<input type="hidden" id="token" value="<?=$_GET['token']?>">
 					<input type="password" id="new_pwd" placeholder="New Password">
-					<input type="password" name="renewpwd" placeholder="Re-enter New Password">
+					<input type="password" id="renewpwd" placeholder="Re-enter New Password">
 					<button type="submit" id="reset_pwd" onclick="reset_password()">Reset Password</button>
 				</div>
-				<div id="error_msg"></div>
+				<div id="error_msg" style="color: white;"></div>
 			</div>
 		</div>
 	</div>

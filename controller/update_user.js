@@ -14,7 +14,7 @@ function reset_password() {
             msg.innerHTML = "Password has been reset";
         }
     });
-    if (new_pwd.value !== renew_pwd) {
+    if (new_pwd.value === renew_pwd) {
         msg.innerHTML = "Passwords do not match";
         return;
     }
